@@ -1,5 +1,6 @@
 import express from "express"
 import path from "path";
+import cookieparser from "cookie-parser"
 
 
 import authRoutes from "./routes/auth.route.js"
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+app.use(cookieparser());
 
 //make eay for deployment 
 
