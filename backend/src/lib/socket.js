@@ -40,8 +40,6 @@ io.on("connection", (socket) => {
     delete userSocketMap[userId];
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
   });
-  console.log(socket.user)
-  console.log(socket.userId)
 });
 
 export { io, app, server };
